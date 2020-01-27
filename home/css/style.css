@@ -91,6 +91,7 @@ body {
   width: 5.2em;
   font-weight: 500;
   border-radius: 0.4em;
+  cursor: pointer;
 }
 
 #side-nav {
