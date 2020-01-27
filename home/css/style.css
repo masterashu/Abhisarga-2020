@@ -4,11 +4,6 @@
 }
 
 @font-face {
-  font-family: "gilroylight";
-  src: url("../fonts/Gilroy-Light.otf") format("opentype");
-}
-
-@font-face {
   font-family: "kablamo";
   src: url("../fonts/ka-blamo.ttf") format("truetype");
 }
@@ -27,7 +22,7 @@ body {
   padding: 0;
   overflow-x: hidden;
   font-family: "lato";
-  background-color: red;
+  font-size: 2vw;
 }
 
 #navbar {
@@ -36,7 +31,7 @@ body {
   left: 0;
   width: 100%;
   box-sizing: border-box;
-  font-size: 2vw;
+  font-size: 1em;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -91,6 +86,7 @@ body {
   width: 5.2em;
   font-weight: 500;
   border-radius: 0.4em;
+  cursor: pointer;
 }
 
 #side-nav {
@@ -155,7 +151,6 @@ body {
 #main #text img {
   position: absolute;
   height: 100%;
-  left: 5em;
   width: auto;
 }
 
@@ -379,61 +374,124 @@ body {
   }
 }
 
-#ABOUT {
-  width: 100vw;
-  height: 110vh;
-  display: block;
-  margin-left: -1%;
-  background-color: #111;
-  /* background-image: linear-gradient(#000000,#000000) */
-}
-
-#TEST {
+#about {
   width: 100vw;
   height: 100vh;
-  flex-grow: 1;
   display: block;
-  margin-left: -1%;
-  margin-bottom: -10%;
-  background-image: linear-gradient(#ffc800, #1325ad, #0b0324);
+  font-size: 1em;
+  background-color: #111;
+  box-sizing: border-box;
+  padding: 5em 3em 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.column {
-  float: left;
-  width: 30%;
-  padding: 10px;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.abttext {
-  float: left;
-  width: 30vw;
-  margin-top: 18%;
-  margin-left: 5%;
-  padding: 10px;
+#abttext {
+  width: 25vw;
   text-align: center;
+  color: #fff;
 }
 
-.abtimg {
-  position: relative;
-  float: right;
-  height: 40vmax;
-  width: 40vmax;
-  display: block;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  margin-right: 10vw;
+#abttext p {
+  padding: 0.2em;
+  font-weight: 500;
+  margin: 0;
 }
 
-#joker_background {
-  position: absolute;
-  width: 100%;
+#abthead {
+  font-size: 1.8em;
+  font-weight: bold;
+  font-family: "blowbrush";
+  padding: 0;
+  margin: 0;
+  padding-bottom: 0.2em;
+}
+
+#abtimg {
+  height: 19em;
+}
+
+#abtimg img {
   height: 100%;
-  background: url("../images/joker2.jpg") no-repeat;
-  background-size: 100% 100%;
+  width: auto;
+}
+
+#test {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding-top: 5em;
+  background: url("../images/bg.svg");
+}
+
+#test h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: bold;
+  font-family: "blowbrush";
+  padding: 0.2em 0;
+  margin: 0;
+}
+
+#test #columns {
+  width: 90%;
+  margin: 1em auto;
+  display: flex;
+  justify-content: space-evenly;
+  color: #fff;
+}
+
+#test #columns .column {
+  padding: 0 0.2em;
+}
+
+#test #columns p {
+  font-weight: 500;
+  margin: 0;
+  padding: 0.2em;
+}
+
+#test #columns span::before {
+  content: "- ";
+}
+
+#test #columns span {
+  display: block;
+  font-weight: 600;
+  width: 100%;
+  text-align: right;
+}
+
+#footer {
+  bottom: 0;
+  position: absolute;
+  background: #172130;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+#footer #social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer #address {
+  text-align: right;
+  padding: 1.1em 0;
+  color: #fff;
+  font-size: 1em;
+  line-height: 1.1em;
+}
+
+#footer #social img {
+  height: 1.2em;
+  width: 1.2em;
+  cursor: pointer;
+  padding: 0.5em;
 }
