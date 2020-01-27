@@ -120,6 +120,7 @@ body {
   align-items: center;
   flex-direction: column;
   font-size: 5vw;
+  background-attachment: fixed;
 }
 #main #character{
   width: 12em;
@@ -139,42 +140,213 @@ body {
 #main #text #A1{
   top: 1.82em;
   left: -4.15em;
+  animation: animateA1 2.5s infinite;
 }
 #main #text #B{
+  animation: animateB 2.7s infinite;
   top: 1em;
   left: -3.6em;
 }
 #main #text #H{
+  animation: animateH 2.1s infinite;
   top: 0.25em;
   left: -2.7em;
 }
 #main #text #I{
+  animation: animateI 2.6s infinite;
   top: 0.3em;
   left: -1.4em;
 }
 #main #text #S{
+  animation: animateS 2.8s infinite;
   top: 0.1em;
   left: -0.9em;
 }
 #main #text #A2{
+  animation: animateA2 2.9s infinite;
   transform: rotateZ(15deg);
   top: 0.1em;
   left: 0.3em;
 }
 #main #text #R{
+  animation: animateR 2.3s infinite;
   transform: rotateZ(15deg);
   top: 0em;
   left: 1.5em;
 }
 #main #text #G{
+  animation: animateG 2.5s infinite;
   transform: rotateZ(35deg);
   top: 1.3em;
   left: 2.2em;
 }
 #main #text #A3{
+  animation: animateA3 2.2s infinite;
   transform: rotateZ(45deg);
   top: 2.5em;
   left: 2.8em;
+}
+
+@keyframes animateA1{
+  0%{
+    transform: translateX(0) translateY(0);
+  }
+  25%{
+    transform: translateX(-1%) translateY(-1.5%) rotateZ(-5deg);
+  }
+  50%{
+    transform: translateX(-2%) translateY(-3.5%) rotateZ(0deg);
+  }
+  75%{
+    transform: translateX(-3%) translateY(-5%) rotateZ(5deg);
+  }
+  100%{
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes animateB{
+  0%{
+    transform: translateX(0) translateY(0);
+  }
+  25%{
+    transform: translateX(-2%) translateY(-1%) rotateZ(5deg);
+  }
+  50%{
+    transform: translateX(-3%) translateY(-2%) rotateZ(0deg);
+  }
+  75%{
+    transform: translateX(-4%) translateY(-3%) rotateZ(-5deg);
+  }
+  100%{
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes animateH{
+  0%{
+    transform: translateX(0) translateY(0);
+  }
+  25%{
+    transform: translateX(-0.5%) translateY(2.5%) rotateZ(-3deg);
+  }
+  50%{
+    transform: translateX(0) translateY(1.5%) rotateZ(3deg);
+  }
+  75%{
+    transform: translateX(0.5%) translateY(-1%) rotateZ(-3deg);
+  }
+  100%{
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes animateI{
+  0%{
+    transform: translateX(0) translateY(0);
+  }
+  25%{
+    transform: translateX(2%) translateY(1.5%) rotateZ(2deg);
+  }
+  50%{
+    transform: translateX(0.5%) translateY(0.5%) rotateZ(1deg);
+  }
+  75%{
+    transform: translateX(-1%) translateY(-1%) rotateZ(-3deg);
+  }
+  100%{
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes animateS{
+  0%{
+    transform: translateX(0) translateY(0);
+  }
+  25%{
+    transform: translateX(2.5%) translateY(4.5%) rotateZ(2deg);
+  }
+  50%{
+    transform: translateX(1.5%) translateY(0.5%) rotateZ(-1deg);
+  }
+  75%{
+    transform: translateX(-2%) translateY(-2%) rotateZ(1deg);
+  }
+  100%{
+    transform: translateX(0) translateY(0);
+  }
+}
+
+@keyframes animateA2{
+  0%{
+    transform: translateX(0) translateY(0) rotateZ(15deg);
+  }
+  25%{
+    transform: translateX(3%) translateY(2.5%) rotateZ(12deg);
+  }
+  50%{
+    transform: translateX(1.5%) translateY(0%) rotateZ(16deg);
+  }
+  75%{
+    transform: translateX(0.5%) translateY(-1.5%) rotateZ(14deg);
+  }
+  100%{
+    transform: translateX(0) translateY(0) rotateZ(15deg);
+  }
+}
+
+@keyframes animateR{
+  0%{
+    transform: translateX(0) translateY(0) rotateZ(15deg);
+  }
+  25%{
+    transform: translateX(-5%) translateY(5%) rotateZ(18deg);
+  }
+  50%{
+    transform: translateX(2.5%) translateY(0.5%) rotateZ(13deg);
+  }
+  75%{
+    transform: translateX(1%) translateY(-3%) rotateZ(11deg);
+  }
+  100%{
+    transform: translateX(0) translateY(0) rotateZ(15deg);
+  }
+}
+
+@keyframes animateG{
+  0%{
+    transform: translateX(0) translateY(0) rotateZ(30deg);
+  }
+  25%{
+    transform: translateX(0.5%) translateY(4.5%) rotateZ(31deg);
+  }
+  50%{
+    transform: translateX(1.5%) translateY(1.5%) rotateZ(33deg);
+  }
+  75%{
+    transform: translateX(-1%) translateY(-1%) rotateZ(29deg);
+  }
+  100%{
+    transform: translateX(0) translateY(0) rotateZ(30deg);
+  }
+}
+
+@keyframes animateA3{
+  0%{
+    transform: translateX(0) translateY(0) rotateZ(45deg);
+  }
+  25%{
+    transform: translateX(2%) translateY(4.5%) rotateZ(40deg);
+  }
+  50%{
+    transform: translateX(0.5%) translateY(-1.5%) rotateZ(47deg);
+  }
+  75%{
+    transform: translateX(-1%) translateY(1.5%) rotateZ(46deg);
+  }
+  100%{
+    transform: translateX(0) translateY(0) rotateZ(45deg);
+  }
 }
 
 #ABOUT {
