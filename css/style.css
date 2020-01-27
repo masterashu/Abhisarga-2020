@@ -374,6 +374,45 @@ body {
   }
 }
 
+.icons {
+  position: absolute;
+  float: left;
+  width: 10vmin;
+}
+
+#icon1{
+  bottom: 5%;
+  left: 20%;
+}
+#icon2{
+  bottom: 5%;
+  left: 30%;
+}
+#icon3{
+  bottom: 5%;
+  left: 40%;
+}
+#icon4{
+  bottom: 5%;
+  left: 50%;
+}
+#icon5{
+  bottom: 5%;
+  left: 60%;
+}
+#icon6{
+  bottom: 5%;
+  left: 70%;
+}
+#icon7{
+  bottom: 5%;
+  left: 80%;
+}
+#icon8{
+  bottom: 5%;
+  left: 10%;
+}
+
 #about {
   width: 100vw;
   height: 100vh;
