@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" href="css/style.css" />
+</head>
+
+<body>
+  <nav id="navbar">
+    <div id="side-nav">
+      <div class="hoverid">
+        <a href="#">About</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+      </div>
+    </div>
+    <a href="#" id="logoimg"><img src="images/logo.svg" /></a>
+    <div id="nav-buttons">
+      <button type="button" id="register">Register</button>
+      <div id="hamburger" value=""></div>
+    </div>
+  </nav>
+
+  <div id="main">
+    <div id="text">
+      <img src="images/text/A1.svg" alt="A" id="A1" />
+      <img src="images/text/B.svg" alt="B" id="B" />
+      <img src="images/text/H.svg" alt="H" id="H" />
+      <img src="images/text/I.svg" alt="I" id="I" />
+      <img src="images/text/S.svg" alt="S" id="S" />
+      <img src="images/text/A2.svg" alt="A" id="A2" />
+      <img src="images/text/R.svg" alt="R" id="R" />
+      <img src="images/text/G.svg" alt="G" id="G" />
+      <img src="images/text/A3.svg" alt="A" id="A3" />
+    </div>
+    <img id="character" src="images/char.svg" alt="Character" />
+  </div>
+  <section id="ABOUT">
+    <div class="abttext">
+      <h1 style="font-size:3em;color:white;font-family:blowbrush;text-align:center">
+        ABOUT
+      </h1>
+      <p style="color:white;font-family:gilroylight">
+        Lorem ipsum is a pseudo-Latin text used in web design, typography,
+        layout, and printing in place of English to emphasise design elements
+        over content.
+      </p>
+    </div>
+    <div class="abtimg">
+      <div id="joker_background"></div>
+      <canvas id="joker_canvas"></canvas>
+      <!-- <img src="images/3596-121645.jpg" alt="joker" style="width:90%;float:right;height:80%;margin-right:20%"> -->
+      <script src="js/joker_animation.js"></script>
+    </div>
+  </section>
+  <section id="TEST">
+    <div class="row" style="padding-top:15%">
+      <h1 style="font-size:3em;color:white;font-family:blowbrush;text-align:center;margin-top: 0px;padding-top: 10px;">
+        TESTINOMIALS
+      </h1>
+      <div class="column">
+        <p style="color:white;font-family:gilroylight">
+          Lorem ipsum is a pseudo-Latin text used in web design, typography,
+          layout, and printing in place of English to emphasise design
+          elements over content.
+        </p>
+      </div>
+      <div class="column">
+        <p style="color:white;font-family:gilroylight">
+          Lorem ipsum is a pseudo-Latin text used in web design, typography,
+          layout, and printing in place of English to emphasise design
+          elements over content.
+        </p>
+      </div>
+      <div class="column">
+        <p style="color:white;font-family:gilroylight">
+          Lorem ipsum is a pseudo-Latin text used in web design, typography,
+          layout, and printing in place of English to emphasise design
+          elements over content.
+        </p>
+      </div>
+    </div>
+  </section>
+  <script>
+    var a = document.getElementById("hamburger");
+    a.setAttribute("value", '\u2630')
+    a.addEventListener("click", () => {
+      toggleNav();
+      if (a.getAttribute("value") === '\u2630') { a.setAttribute("value", '\u2715'); } else { a.setAttribute("value", '\u2630'); }
+    });
+    function toggleNav() {
+      document.getElementById("side-nav").classList.toggle("active");
+    }
+  </script>
+</body>
+
+</html>
