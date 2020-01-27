@@ -4,11 +4,6 @@
 }
 
 @font-face {
-  font-family: "gilroylight";
-  src: url("../fonts/Gilroy-Light.otf") format("opentype");
-}
-
-@font-face {
   font-family: "kablamo";
   src: url("../fonts/ka-blamo.ttf") format("truetype");
 }
@@ -156,7 +151,6 @@ body {
 #main #text img {
   position: absolute;
   height: 100%;
-  left: 5em;
   width: auto;
 }
 
@@ -399,13 +393,13 @@ body {
   color: #fff;
 }
 
-#abttext p{
+#abttext p {
   padding: 0.2em;
   font-weight: 500;
   margin: 0;
 }
 
-#abthead{
+#abthead {
   font-size: 1.8em;
   font-weight: bold;
   font-family: "blowbrush";
@@ -414,42 +408,90 @@ body {
   padding-bottom: 0.2em;
 }
 
-#abtimg{
+#abtimg {
   height: 19em;
 }
 
-#abtimg img{
+#abtimg img {
   height: 100%;
   width: auto;
 }
 
 #test {
-  width: 100vw;
-  height: 100vh;
-  background: red;
-}
-
-.column {
-  float: left;
-  width: 30%;
-  padding: 10px;
-}
-
-.abtimg {
   position: relative;
-  float: right;
-  height: 40vmax;
-  width: 40vmax;
-  display: block;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  margin-right: 10vw;
+  width: 100vw;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding-top: 5em;
+  background: url("../images/bg.svg");
 }
 
-#joker_background {
-  position: absolute;
+#test h1 {
+  color: #fff;
+  text-align: center;
+  font-size: 1.8em;
+  font-weight: bold;
+  font-family: "blowbrush";
+  padding: 0.2em 0;
+  margin: 0;
+}
+
+#test #columns {
+  width: 90%;
+  margin: 1em auto;
+  display: flex;
+  justify-content: space-evenly;
+  color: #fff;
+}
+
+#test #columns .column {
+  padding: 0 0.2em;
+}
+
+#test #columns p {
+  font-weight: 500;
+  margin: 0;
+  padding: 0.2em;
+}
+
+#test #columns span::before {
+  content: "- ";
+}
+
+#test #columns span {
+  display: block;
+  font-weight: 600;
   width: 100%;
-  height: 100%;
-  background: url("../images/joker2.jpg") no-repeat;
-  background-size: 100% 100%;
+  text-align: right;
+}
+
+#footer {
+  bottom: 0;
+  position: absolute;
+  background: #172130;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+#footer #social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#footer #address {
+  text-align: right;
+  padding: 1.1em 0;
+  color: #fff;
+  font-size: 1em;
+  line-height: 1.1em;
+}
+
+#footer #social img {
+  height: 1.2em;
+  width: 1.2em;
+  cursor: pointer;
+  padding: 0.5em;
 }

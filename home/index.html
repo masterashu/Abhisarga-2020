@@ -1,102 +1,116 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+  </head>
 
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" type="text/css" href="css/style.css" />
-</head>
+  <body>
+    <nav id="navbar">
+      <div id="side-nav">
+        <div class="hoverid">
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Clients</a>
+          <a href="#">Contact</a>
+        </div>
+      </div>
+      <a href="#" id="logoimg"><img src="images/logo.svg"/></a>
+      <div id="nav-buttons">
+        <button type="button" id="register">Register</button>
+        <div id="hamburger" value=""></div>
+      </div>
+    </nav>
 
-<body>
-  <nav id="navbar">
-    <div id="side-nav">
-      <div class="hoverid">
-        <a href="#">About</a>
-        <a href="#">Services</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
+    <div id="main">
+      <div id="text">
+        <img src="images/text/A1.svg" alt="A" id="A1" />
+        <img src="images/text/B.svg" alt="B" id="B" />
+        <img src="images/text/H.svg" alt="H" id="H" />
+        <img src="images/text/I.svg" alt="I" id="I" />
+        <img src="images/text/S.svg" alt="S" id="S" />
+        <img src="images/text/A2.svg" alt="A" id="A2" />
+        <img src="images/text/R.svg" alt="R" id="R" />
+        <img src="images/text/G.svg" alt="G" id="G" />
+        <img src="images/text/A3.svg" alt="A" id="A3" />
+      </div>
+      <img id="character" src="images/char.svg" alt="Character" />
+    </div>
+
+    <div id="about">
+      <div id="abttext">
+        <h1 id="abthead">
+          ABOUT
+        </h1>
+        <p>
+          Lorem ipsum is a pseudo-Latin text used in web design, typography,
+          layout, and printing in place of English to emphasise design elements
+          over content.
+        </p>
+      </div>
+      <div id="abtimg">
+        <img src="images/joker2.jpg" />
       </div>
     </div>
-    <a href="#" id="logoimg"><img src="images/logo.svg" /></a>
-    <div id="nav-buttons">
-      <button type="button" id="register">Register</button>
-      <div id="hamburger" value=""></div>
-    </div>
-  </nav>
 
-  <div id="main">
-    <div id="text">
-      <img src="images/text/A1.svg" alt="A" id="A1" />
-      <img src="images/text/B.svg" alt="B" id="B" />
-      <img src="images/text/H.svg" alt="H" id="H" />
-      <img src="images/text/I.svg" alt="I" id="I" />
-      <img src="images/text/S.svg" alt="S" id="S" />
-      <img src="images/text/A2.svg" alt="A" id="A2" />
-      <img src="images/text/R.svg" alt="R" id="R" />
-      <img src="images/text/G.svg" alt="G" id="G" />
-      <img src="images/text/A3.svg" alt="A" id="A3" />
-    </div>
-    <img id="character" src="images/char.svg" alt="Character" />
-  </div>
-
-  <div id="about">
-    <div id="abttext">
-      <h1 id="abthead">
-        ABOUT
+    <div id="test">
+      <h1>
+        TESTINOMIALS
       </h1>
-      <p>
-        Lorem ipsum is a pseudo-Latin text used in web design, typography,
-        layout, and printing in place of English to emphasise design elements
-        over content.
-      </p>
-    </div>
-    <div id="abtimg">
-      <img src="images/joker2.jpg">
-    </div>
-  </div>
+      <div id="columns">
+        <div class="column">
+          <p>
+            Lorem ipsum is a pseudo-Latin text used in web design, typography,
+            layout, and printing in place of English to emphasise design
+            elements over content.
+          </p>
+          <span>Napolean</span>
+        </div>
+        <div class="column">
+          <p>
+            Lorem ipsum is a pseudo-Latin text used in web design, typography,
+            layout, and printing in place of English to emphasise design
+            elements over content.
+          </p>
+          <span>Einstien</span>
+        </div>
+        <div class="column">
+          <p>
+            Lorem ipsum is a pseudo-Latin text used in web design, typography,
+            layout, and printing in place of English to emphasise design
+            elements over content.
+          </p>
+          <span>Da Vinci</span>
+        </div>
+      </div>
 
-  <div id="test">
-    <h1>
-      TESTINOMIALS
-    </h1>
-    <div>
-      <div class="column">
-        <p>
-          Lorem ipsum is a pseudo-Latin text used in web design, typography,
-          layout, and printing in place of English to emphasise design
-          elements over content.
-        </p>
-        <span>Napolean</span>
-      </div>
-      <div class="column">
-        <p>
-          Lorem ipsum is a pseudo-Latin text used in web design, typography,
-          layout, and printing in place of English to emphasise design
-          elements over content.
-        </p>
-        <span>Einstien</span>
-      </div>
-      <div class="column">
-        <p>
-          Lorem ipsum is a pseudo-Latin text used in web design, typography,
-          layout, and printing in place of English to emphasise design
-          elements over content.
-        </p>
-        <span>Da Vinci</span>
+      <div id="footer">
+        <div id="social">
+          <img src="images/facebook.svg" />
+          <img src="images/twitter.svg" />
+          <img src="images/instagram.svg" />
+        </div>
+        <div id="address">
+          Indian Institute of Information Technology<br />
+          630 Gnan Marg, Sri City<br />Andhra Pradesh 517646
+        </div>
       </div>
     </div>
-  </div>
 
-  <script>
-    var a = document.getElementById("hamburger");
-    a.setAttribute("value", '\u2630')
-    a.addEventListener("click", () => {
-      toggleNav();
-      if (a.getAttribute("value") === '\u2630') { a.setAttribute("value", '\u2715'); } else { a.setAttribute("value", '\u2630'); }
-    });
-    function toggleNav() {
-      document.getElementById("side-nav").classList.toggle("active");
-    }
-  </script>
-</body>
-
+    <script>
+      var a = document.getElementById("hamburger");
+      a.setAttribute("value", "\u2630");
+      a.addEventListener("click", () => {
+        toggleNav();
+        if (a.getAttribute("value") === "\u2630") {
+          a.setAttribute("value", "\u2715");
+        } else {
+          a.setAttribute("value", "\u2630");
+        }
+      });
+      function toggleNav() {
+        document.getElementById("side-nav").classList.toggle("active");
+      }
+    </script>
+  </body>
 </html>
