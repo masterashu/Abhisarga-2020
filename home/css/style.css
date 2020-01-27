@@ -27,7 +27,7 @@ body {
   padding: 0;
   overflow-x: hidden;
   font-family: "lato";
-  background-color: red;
+  font-size: 2vw;
 }
 
 #navbar {
@@ -36,7 +36,7 @@ body {
   left: 0;
   width: 100%;
   box-sizing: border-box;
-  font-size: 2vw;
+  font-size: 1em;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -379,44 +379,59 @@ body {
   }
 }
 
-#ABOUT {
-  width: 100vw;
-  height: 110vh;
-  display: block;
-  margin-left: -1%;
-  background-color: #111;
-  /* background-image: linear-gradient(#000000,#000000) */
-}
-
-#TEST {
+#about {
   width: 100vw;
   height: 100vh;
-  flex-grow: 1;
   display: block;
-  margin-left: -1%;
-  margin-bottom: -10%;
-  background-image: linear-gradient(#ffc800, #1325ad, #0b0324);
+  font-size: 1em;
+  background-color: #111;
+  box-sizing: border-box;
+  padding: 5em 3em 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#abttext {
+  width: 25vw;
+  text-align: center;
+  color: #fff;
+}
+
+#abttext p{
+  padding: 0.2em;
+  font-weight: 500;
+  margin: 0;
+}
+
+#abthead{
+  font-size: 1.8em;
+  font-weight: bold;
+  font-family: "blowbrush";
+  padding: 0;
+  margin: 0;
+  padding-bottom: 0.2em;
+}
+
+#abtimg{
+  height: 19em;
+}
+
+#abtimg img{
+  height: 100%;
+  width: auto;
+}
+
+#test {
+  width: 100vw;
+  height: 100vh;
+  background: red;
 }
 
 .column {
   float: left;
   width: 30%;
   padding: 10px;
-}
-
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.abttext {
-  float: left;
-  width: 30vw;
-  margin-top: 18%;
-  margin-left: 5%;
-  padding: 10px;
-  text-align: center;
 }
 
 .abtimg {
