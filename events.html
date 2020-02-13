@@ -134,57 +134,61 @@
     </div>
   </div>
   <script>
-    let list = document.getElementsByClassName("card");
-    let start = list.length / 2;
-    for (let i = 0; i < list.length; i++) {
-      let e = list[i];
-      e.addEventListener("click", function () {
-        e.classList.toggle("active");
-      });
-    }
-
-    function next() {
+    if (window.matchMedia("(max-width: 360px)").matches) {
+      /* The viewport is less than, or equal to, 700 pixels wide */
+    } else {
+      let list = document.getElementsByClassName("card");
+      let start = list.length / 2;
       for (let i = 0; i < list.length; i++) {
-        if (list[i].classList.contains("active")) {
-          list[i].classList.remove("active");
-          list[(i + 1) % list.length].classList.add("active");
-          break;
+        let e = list[i];
+        e.addEventListener("click", function () {
+          e.classList.toggle("active");
+        });
+      }
+  
+      function next() {
+        for (let i = 0; i < list.length; i++) {
+          if (list[i].classList.contains("active")) {
+            list[i].classList.remove("active");
+            list[(i + 1) % list.length].classList.add("active");
+            break;
+          }
+        }
+        start = (start + 1) % list.length;
+        animate();
+      }
+  
+      function previous() {
+        for (let i = 0; i < list.length; i++) {
+          if (list[i].classList.contains("active")) {
+            list[i].classList.remove("active");
+            list[(i - 1 + list.length) % list.length].classList.add("active");
+            break;
+          }
+        }
+        start = (start - 1 + list.length) % list.length;
+        animate();
+      }
+  
+      function animate() {
+        let right = parseInt(list.length / 2) - 1;
+        let left = list.length - right - 1;
+        list[start].style.left = "24em";
+        for (let i = 1; i <= left; i++) {
+          let e = list[(start - i + list.length) % list.length];
+          e.style.left = (3 - i) * 8 + "em";
+        }
+        for (let i = 1; i <= right; i++) {
+          let e = list[(start + i) % list.length];
+          e.style.left = (3 + i) * 8 + "em";
         }
       }
-      start = (start + 1) % list.length;
-      animate();
-    }
-
-    function previous() {
-      for (let i = 0; i < list.length; i++) {
-        if (list[i].classList.contains("active")) {
-          list[i].classList.remove("active");
-          list[(i - 1 + list.length) % list.length].classList.add("active");
-          break;
-        }
-      }
-      start = (start - 1 + list.length) % list.length;
-      animate();
-    }
-
-    function animate() {
-      let right = parseInt(list.length / 2) - 1;
-      let left = list.length - right - 1;
-      list[start].style.left = "24em";
-      for (let i = 1; i <= left; i++) {
-        let e = list[(start - i + list.length) % list.length];
-        e.style.left = (3 - i) * 8 + "em";
-      }
-      for (let i = 1; i <= right; i++) {
-        let e = list[(start + i) % list.length];
-        e.style.left = (3 + i) * 8 + "em";
-      }
-    }
-
-    document.getElementById("go-button-next").onclick = next;
-    document.getElementById("go-button-previous").onclick = previous;
-
-    animate();
+  
+      document.getElementById("go-button-next").onclick = next;
+      document.getElementById("go-button-previous").onclick = previous;
+  
+      animate();    }
+    
   </script>
 </body>
 

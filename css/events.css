@@ -12,8 +12,7 @@ body {
   padding: 0;
   overflow-x: hidden;
   background-blend-mode: overlay;
-  background: url("../img/background.jpg"),
-    linear-gradient(to bottom, rgba(121, 40, 90, 0.4), rgba(11, 80, 120, 0.8));
+  background: url("../img/background.jpg"), linear-gradient(to bottom, rgba(121, 40, 90, 0.4), rgba(11, 80, 120, 0.8));
 }
 
 #container {
@@ -128,9 +127,7 @@ body {
   margin-top: 2%;
   width: 100%;
   color: #fff;
-  text-shadow: 0.02em 0.02em 1px rgba(0, 0, 0, 0.3),
-    -0.02em 0.02em 1px rgba(0, 0, 0, 0.3), 0.02em -0.02em 1px rgba(0, 0, 0, 0.3),
-    -0.02em -0.02em 1px rgba(0, 0, 0, 0.3);
+  text-shadow: 0.02em 0.02em 1px rgba(0, 0, 0, 0.3), -0.02em 0.02em 1px rgba(0, 0, 0, 0.3), 0.02em -0.02em 1px rgba(0, 0, 0, 0.3), -0.02em -0.02em 1px rgba(0, 0, 0, 0.3);
   width: 95%;
   text-align: right;
   display: inline-block;
@@ -140,9 +137,7 @@ body {
 }
 
 .card:hover span {
-  text-shadow: 0.05em 0.05em 0 rgba(0, 0, 0, 0.3),
-    -0.05em 0.05em 0 rgba(0, 0, 0, 0.3), 0.05em -0.05em 0 rgba(0, 0, 0, 0.3),
-    -0.05em -0.05em 0 rgba(0, 0, 0, 0.3);
+  text-shadow: 0.05em 0.05em 0 rgba(0, 0, 0, 0.3), -0.05em 0.05em 0 rgba(0, 0, 0, 0.3), 0.05em -0.05em 0 rgba(0, 0, 0, 0.3), -0.05em -0.05em 0 rgba(0, 0, 0, 0.3);
 }
 
 .card.active .superhero.image {
@@ -156,9 +151,7 @@ body {
 }
 
 .card.active span {
-  text-shadow: 0.05em 0.05em 0 rgba(0, 0, 0, 0.3),
-    -0.05em 0.05em 0 rgba(0, 0, 0, 0.3), 0.05em -0.05em 0 rgba(0, 0, 0, 0.3),
-    -0.05em -0.05em 0 rgba(0, 0, 0, 0.3);
+  text-shadow: 0.05em 0.05em 0 rgba(0, 0, 0, 0.3), -0.05em 0.05em 0 rgba(0, 0, 0, 0.3), 0.05em -0.05em 0 rgba(0, 0, 0, 0.3), -0.05em -0.05em 0 rgba(0, 0, 0, 0.3);
 }
 
 .card.active {
@@ -181,4 +174,49 @@ body {
   left: 40%;
   transition-duration: 0.4s;
   transition-delay: 0.3s;
+}
+
+@media (max-width: 360px) {
+  #go-previous {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+  #go-next {
+    width: 0;
+    height: 0;
+    visibility: hidden;
+  }
+  .card {
+    position: relative;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    transform: none;
+  }
+  .card .back {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+  }
+  .card .back.back.drop {
+    width: 100vw;
+    height: 100vh;
+  }
+  .card .superhero {
+    position: absolute;
+    width: 66vw;
+    height: auto;
+    transform: none;
+  }
+  .card .superhero.filter {
+    filter: blur(5px) brightness(20%) opacity(90%);
+  }
+  .card .superhero.image {
+    left: 5px;
+    bottom: 5px;
+  }
+  .card span {
+    font-size: 4em;
+  }
 }
