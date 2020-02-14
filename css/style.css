@@ -4,8 +4,8 @@
 }
 
 @font-face {
-  font-family: "kablamo";
-  src: url("../fonts/ka-blamo.ttf") format("truetype");
+  font-family: "reality-check";
+  src: url("../fonts/Reality_Check.otf") format("opentype");
 }
 
 @font-face {
@@ -19,10 +19,10 @@ a {
 
 body {
   margin: 0;
+  width: 100%;
   padding: 0;
   overflow-x: hidden;
   font-family: "lato";
-  font-size: 2vw;
 }
 
 #navbar {
@@ -31,7 +31,7 @@ body {
   left: 0;
   width: 100%;
   box-sizing: border-box;
-  font-size: 1em;
+  font-size: 2vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -39,7 +39,7 @@ body {
 }
 
 #logoimg {
-  display: block;
+  width: auto;
   height: 5em;
 }
 
@@ -52,7 +52,8 @@ body {
   z-index: 2;
   font-size: 1em;
   display: flex;
-  width: 8em;
+  box-sizing: border-box;
+  width: 10em;
   padding: 0 1em;
   justify-content: space-between;
   align-items: center;
@@ -92,10 +93,10 @@ body {
 #side-nav {
   position: fixed;
   height: 100%;
-  width: 0;
+  width: 10em;
   z-index: 1;
   top: 0;
-  right: 0;
+  right: -10em;
   background-color: #444;
   overflow-x: hidden;
   transition: 0.5s;
@@ -103,7 +104,7 @@ body {
 }
 
 #side-nav.active {
-  width: 10em;
+  right: 0em;
 }
 
 .hoverid a {
@@ -113,22 +114,23 @@ body {
   width: 100%;
   text-align: center;
   height: 1em;
-  margin: 0.5em 0;
+  margin: 0.8em 0;
   font-weight: 700;
 }
 
 .hoverid a:hover {
-  font-family: "kablamo";
+  font-family: "reality-check";
   font-weight: 500;
-  height: 0.75em;
+  height: 0.7em;
   font-size: 2em;
+  text-shadow: -0.1em 0 red;
 }
 
 #main {
   background: url("../images/bg.svg");
   background-size: cover;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -161,38 +163,38 @@ body {
 }
 
 #main #text #B {
-  animation: animateB 2.7s infinite;
+  animation: animateB 2.5s infinite;
   top: 1em;
   left: -3.6em;
 }
 
 #main #text #H {
-  animation: animateH 2.1s infinite;
+  animation: animateH 2.5s infinite;
   top: 0.25em;
   left: -2.7em;
 }
 
 #main #text #I {
-  animation: animateI 2.6s infinite;
+  animation: animateI 2.5s infinite;
   top: 0.3em;
   left: -1.4em;
 }
 
 #main #text #S {
-  animation: animateS 2.8s infinite;
+  animation: animateS 2.5s infinite;
   top: 0.1em;
   left: -0.9em;
 }
 
 #main #text #A2 {
-  animation: animateA2 2.9s infinite;
+  animation: animateA2 2.5s infinite;
   transform: rotateZ(15deg);
   top: 0.1em;
   left: 0.3em;
 }
 
 #main #text #R {
-  animation: animateR 2.3s infinite;
+  animation: animateR 2.5s infinite;
   transform: rotateZ(15deg);
   top: 0em;
   left: 1.5em;
@@ -206,7 +208,7 @@ body {
 }
 
 #main #text #A3 {
-  animation: animateA3 2.2s infinite;
+  animation: animateA3 2.5s infinite;
   transform: rotateZ(45deg);
   top: 2.5em;
   left: 2.8em;
@@ -214,237 +216,252 @@ body {
 
 @keyframes animateA1 {
   0% {
-    transform: translateX(0) translateY(0);
+    transform: scale(0.8);
   }
   25% {
-    transform: translateX(-1%) translateY(-1.5%) rotateZ(-5deg);
+    transform: scale(0.9);
   }
   50% {
-    transform: translateX(-2%) translateY(-3.5%) rotateZ(0deg);
+    transform: scale(1);
   }
   75% {
-    transform: translateX(-3%) translateY(-5%) rotateZ(5deg);
+    transform: scale(0.9);
   }
   100% {
-    transform: translateX(0) translateY(0);
+    transform: scale(0.8);
   }
 }
 
 @keyframes animateB {
   0% {
-    transform: translateX(0) translateY(0);
+    transform: scale(0.9);
   }
   25% {
-    transform: translateX(-2%) translateY(-1%) rotateZ(5deg);
+    transform: scale(1);
   }
   50% {
-    transform: translateX(-3%) translateY(-2%) rotateZ(0deg);
+    transform: scale(0.9);
   }
   75% {
-    transform: translateX(-4%) translateY(-3%) rotateZ(-5deg);
+    transform: scale(0.8);
   }
   100% {
-    transform: translateX(0) translateY(0);
+    transform: scale(0.9);
   }
 }
 
 @keyframes animateH {
   0% {
-    transform: translateX(0) translateY(0);
+    transform: scale(1);
   }
   25% {
-    transform: translateX(-0.5%) translateY(2.5%) rotateZ(-3deg);
+    transform: scale(0.9);
   }
   50% {
-    transform: translateX(0) translateY(1.5%) rotateZ(3deg);
+    transform: scale(0.8);
   }
   75% {
-    transform: translateX(0.5%) translateY(-1%) rotateZ(-3deg);
+    transform: scale(0.9);
   }
   100% {
-    transform: translateX(0) translateY(0);
+    transform: scale(1);
   }
 }
 
 @keyframes animateI {
   0% {
-    transform: translateX(0) translateY(0);
+    transform: scale(0.9);
   }
   25% {
-    transform: translateX(2%) translateY(1.5%) rotateZ(2deg);
+    transform: scale(1);
   }
   50% {
-    transform: translateX(0.5%) translateY(0.5%) rotateZ(1deg);
+    transform: scale(0.9);
   }
   75% {
-    transform: translateX(-1%) translateY(-1%) rotateZ(-3deg);
+    transform: scale(0.8);
   }
   100% {
-    transform: translateX(0) translateY(0);
+    transform: scale(0.9);
   }
 }
 
 @keyframes animateS {
   0% {
-    transform: translateX(0) translateY(0);
+    transform: scale(0.8);
   }
   25% {
-    transform: translateX(2.5%) translateY(4.5%) rotateZ(2deg);
+    transform: scale(0.9);
   }
   50% {
-    transform: translateX(1.5%) translateY(0.5%) rotateZ(-1deg);
+    transform: scale(1);
   }
   75% {
-    transform: translateX(-2%) translateY(-2%) rotateZ(1deg);
+    transform: scale(0.9);
   }
   100% {
-    transform: translateX(0) translateY(0);
+    transform: scale(0.8);
   }
 }
 
 @keyframes animateA2 {
   0% {
-    transform: translateX(0) translateY(0) rotateZ(15deg);
+    transform: scale(0.9) rotateZ(15deg);
   }
   25% {
-    transform: translateX(3%) translateY(2.5%) rotateZ(12deg);
+    transform: scale(1) rotateZ(15deg);
   }
   50% {
-    transform: translateX(1.5%) translateY(0%) rotateZ(16deg);
+    transform: scale(0.9) rotateZ(15deg);
   }
   75% {
-    transform: translateX(0.5%) translateY(-1.5%) rotateZ(14deg);
+    transform: scale(0.8) rotateZ(15deg);
   }
   100% {
-    transform: translateX(0) translateY(0) rotateZ(15deg);
+    transform: scale(0.9) rotateZ(15deg);
   }
 }
 
 @keyframes animateR {
   0% {
-    transform: translateX(0) translateY(0) rotateZ(15deg);
+    transform: scale(1) rotateZ(15deg);
   }
   25% {
-    transform: translateX(-5%) translateY(5%) rotateZ(18deg);
+    transform: scale(0.9) rotateZ(15deg);
   }
   50% {
-    transform: translateX(2.5%) translateY(0.5%) rotateZ(13deg);
+    transform: scale(0.8) rotateZ(15deg);
   }
   75% {
-    transform: translateX(1%) translateY(-3%) rotateZ(11deg);
+    transform: scale(0.9) rotateZ(15deg);
   }
   100% {
-    transform: translateX(0) translateY(0) rotateZ(15deg);
+    transform: scale(1) rotateZ(15deg);
   }
 }
 
 @keyframes animateG {
   0% {
-    transform: translateX(0) translateY(0) rotateZ(30deg);
+    transform: scale(0.9) rotateZ(30deg);
   }
   25% {
-    transform: translateX(0.5%) translateY(4.5%) rotateZ(31deg);
+    transform: scale(1) rotateZ(30deg);
   }
   50% {
-    transform: translateX(1.5%) translateY(1.5%) rotateZ(33deg);
+    transform: scale(0.9) rotateZ(30deg);
   }
   75% {
-    transform: translateX(-1%) translateY(-1%) rotateZ(29deg);
+    transform: scale(0.8) rotateZ(30deg);
   }
   100% {
-    transform: translateX(0) translateY(0) rotateZ(30deg);
+    transform: scale(0.9) rotateZ(30deg);
   }
 }
 
 @keyframes animateA3 {
   0% {
-    transform: translateX(0) translateY(0) rotateZ(45deg);
+    transform: scale(0.8) rotateZ(45deg);
   }
   25% {
-    transform: translateX(2%) translateY(4.5%) rotateZ(40deg);
+    transform: scale(0.9) rotateZ(45deg);
   }
   50% {
-    transform: translateX(0.5%) translateY(-1.5%) rotateZ(47deg);
+    transform: scale(1) rotateZ(45deg);
   }
   75% {
-    transform: translateX(-1%) translateY(1.5%) rotateZ(46deg);
+    transform: scale(0.9) rotateZ(45deg);
   }
   100% {
-    transform: translateX(0) translateY(0) rotateZ(45deg);
+    transform: scale(0.8) rotateZ(45deg);
   }
+}
+
+#scroll-icons {
+  position: relative;
+  top: -0.5em;
+  font-size: 1em;
+  width: 100%;
+  height: 1em;
+  overflow: hidden;
 }
 
 .icons {
   position: absolute;
-  float: left;
-  width: 10vmin;
+  margin: 0 0.5em;
+  width: 1em;
+  height: 100%;
+  left: 100%;
 }
 
-#icon1{
-  bottom: 5%;
-  left: 20%;
+#icon1 {
+  animation: marquee 8s linear 0s infinite;
 }
-#icon2{
-  bottom: 5%;
-  left: 30%;
+#icon2 {
+  animation: marquee 8s linear 1s infinite;
 }
-#icon3{
-  bottom: 5%;
-  left: 40%;
+#icon3 {
+  animation: marquee 8s linear 2s infinite;
 }
-#icon4{
-  bottom: 5%;
-  left: 50%;
+#icon4 {
+  animation: marquee 8s linear 3s infinite;
 }
-#icon5{
-  bottom: 5%;
-  left: 60%;
+#icon5 {
+  animation: marquee 8s linear 4s infinite;
 }
-#icon6{
-  bottom: 5%;
-  left: 70%;
+#icon6 {
+  animation: marquee 8s linear 5s infinite;
 }
-#icon7{
-  bottom: 5%;
-  left: 80%;
+#icon7 {
+  animation: marquee 8s linear 6s infinite;
 }
-#icon8{
-  bottom: 5%;
-  left: 10%;
+#icon8 {
+  animation: marquee 8s linear 7s infinite;
+}
+
+@keyframes marquee {
+  0% {
+    left: 100%;
+  }
+  80% {
+    left: 0%;
+  }
+  100% {
+    left: -25%;
+  }
 }
 
 #about {
   width: 100vw;
-  height: 100vh;
-  display: block;
-  font-size: 1em;
+  min-height: 100vh;
+  font-size: 2vw;
   background-color: #111;
   box-sizing: border-box;
-  padding: 5em 3em 0;
+  padding: 5em 0;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 #abttext {
-  width: 25vw;
+  width: 18em;
   text-align: center;
   color: #fff;
 }
 
 #abttext p {
-  padding: 0.2em;
+  padding: 0.15em;
   font-weight: 500;
   margin: 0;
 }
 
 #abthead {
-  font-size: 1.8em;
+  font-size: 2em;
   font-weight: bold;
   font-family: "blowbrush";
   padding: 0;
   margin: 0;
-  padding-bottom: 0.2em;
+  padding-bottom: 0.3em;
 }
 
 #abtimg {
@@ -458,6 +475,7 @@ body {
 
 #test {
   position: relative;
+  font-size: 2vw;
   width: 100vw;
   min-height: 100vh;
   box-sizing: border-box;
@@ -522,15 +540,71 @@ body {
 
 #footer #address {
   text-align: right;
-  padding: 1.1em 0;
+  padding: 0.5em 0;
   color: #fff;
-  font-size: 1em;
+  font-size: 0.9em;
   line-height: 1.1em;
 }
 
 #footer #social img {
-  height: 1.2em;
-  width: 1.2em;
+  height: 1.3em;
+  width: 1.3em;
   cursor: pointer;
-  padding: 0.5em;
+  padding: 0.2em 0.5em;
+}
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  #navbar {
+    font-size: 2.3vw;
+  }
+  #main {
+    font-size: 5.7vw;
+  }
+  #about {
+    font-size: 2.3vw;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  #navbar {
+    font-size: 3vw;
+  }
+  #main {
+    font-size: 6.3vw;
+  }
+  #about {
+    font-size: 3vw;
+  }
+}
+@media (min-width: 481px) and (max-width: 767px) {
+  #navbar {
+    font-size: 3.6vw;
+  }
+  #main {
+    font-size: 7vw;
+  }
+  #about {
+    font-size: 3.6vw;
+  }
+}
+@media (min-width: 320px) and (max-width: 480px) {
+  #navbar {
+    font-size: 4.3vw;
+  }
+  #main {
+    font-size: 7.8vw;
+  }
+  #about {
+    font-size: 4.3vw;
+  }
+}
+@media (max-width: 320px) {
+  #navbar {
+    font-size: 4.8vw;
+  }
+  #main {
+    font-size: 8.3vw;
+  }
+  #about {
+    font-size: 4.8vw;
+  }
 }
