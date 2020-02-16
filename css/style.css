@@ -396,24 +396,31 @@ body {
 #icon1 {
   animation: marquee 8s linear 0s infinite;
 }
+
 #icon2 {
   animation: marquee 8s linear 1s infinite;
 }
+
 #icon3 {
   animation: marquee 8s linear 2s infinite;
 }
+
 #icon4 {
   animation: marquee 8s linear 3s infinite;
 }
+
 #icon5 {
   animation: marquee 8s linear 4s infinite;
 }
+
 #icon6 {
   animation: marquee 8s linear 5s infinite;
 }
+
 #icon7 {
   animation: marquee 8s linear 6s infinite;
 }
+
 #icon8 {
   animation: marquee 8s linear 7s infinite;
 }
@@ -479,7 +486,6 @@ body {
   font-size: 2vw;
   width: 100vw;
   min-height: 100vh;
-  height: auto;
   box-sizing: border-box;
   padding-top: 5em;
   background: url("../images/bg.svg");
@@ -487,7 +493,7 @@ body {
 
 #test h1 {
   color: #fff;
-  text-align: left;
+  text-align: center;
   font-size: 1.8em;
   font-weight: bold;
   font-family: "blowbrush";
@@ -498,6 +504,7 @@ body {
 #test #columns {
   width: 90%;
   margin: 1em auto;
+  margin-bottom: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -505,17 +512,17 @@ body {
 }
 
 #test #columns .column {
-  font-size: 1em;
+  font-size: 0.8em;
   float: left;
   padding: 1em;
-  width:auto;
+  padding-bottom: 0;
+  width: 20vmax;
 }
 
 #test #columns p {
   font-weight: 500;
   margin: 0;
   padding: 0.2em;
-  line-height: 1.6;
 }
 
 #test #columns .contact-name {
@@ -528,7 +535,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 100%;
+  width: 100vw;
   flex-wrap: wrap;
 }
 
@@ -567,7 +574,14 @@ body {
   #footer {
     font-size: 2.3vw;
   }
+  #test h1 {
+    font-size: 2em;
+  }
+  #test #columns {
+    font-size: 1em;
+  }
 }
+
 @media (min-width: 768px) and (max-width: 1024px) {
   #navbar {
     font-size: 3vw;
@@ -581,7 +595,20 @@ body {
   #footer {
     font-size: 3vw;
   }
+  #test h1 {
+    font-size: 2em;
+  }
+  #test #columns {
+    font-size: 1.2em;
+  }
+  #test h1 {
+    font-size: 2.4em;
+  }
+  #test #columns {
+    font-size: 1.2em;
+  }
 }
+
 @media (min-width: 481px) and (max-width: 767px) {
   #navbar {
     font-size: 3.6vw;
@@ -595,7 +622,14 @@ body {
   #footer {
     font-size: 3.6vw;
   }
+  #test h1 {
+    font-size: 2.4em;
+  }
+  #test #columns {
+    font-size: 1.4em;
+  }
 }
+
 @media (min-width: 320px) and (max-width: 480px) {
   #navbar {
     font-size: 4.3vw;
@@ -612,7 +646,14 @@ body {
   #footer #address {
     text-align: center;
   }
+  #test h1 {
+    font-size: 3em;
+  }
+  #test #columns {
+    font-size: 2em;
+  }
 }
+
 @media (max-width: 320px) {
   #navbar {
     font-size: 4.8vw;
@@ -628,5 +669,11 @@ body {
   }
   #footer #address {
     text-align: center;
+  }
+  #test h1 {
+    font-size: 4em;
+  }
+  #test #columns {
+    font-size: 2.4em;
   }
 }
