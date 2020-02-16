@@ -478,6 +478,7 @@ body {
   font-size: 2vw;
   width: 100vw;
   min-height: 100vh;
+  height: auto;
   box-sizing: border-box;
   padding-top: 5em;
   background: url("../images/bg.svg");
@@ -485,41 +486,39 @@ body {
 
 #test h1 {
   color: #fff;
-  text-align: center;
+  text-align: left;
   font-size: 1.8em;
   font-weight: bold;
   font-family: "blowbrush";
   padding: 0.2em 0;
-  margin: 0;
+  margin-left: 2em;
 }
 
 #test #columns {
   width: 90%;
   margin: 1em auto;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   color: #fff;
 }
 
 #test #columns .column {
-  padding: 0 0.2em;
+  font-size: 1em;
+  float: left;
+  padding: 1em;
+  width:auto;
 }
 
 #test #columns p {
   font-weight: 500;
   margin: 0;
   padding: 0.2em;
+  line-height: 1.6;
 }
 
-#test #columns span::before {
-  content: "- ";
-}
-
-#test #columns span {
-  display: block;
-  font-weight: 600;
-  width: 100%;
-  text-align: right;
+#test #columns .contact-name {
+  font-weight: 900;
 }
 
 #footer {
