@@ -3,6 +3,10 @@
   src: url("../fonts/Jungle_Land.ttf") format("truetype");
 }
 
+a {
+  color: unset;
+}
+
 body {
   background: url("../images/members_bg.png");
   background-size: 100vw 100vh;
@@ -55,8 +59,6 @@ body {
   position: relative;
   height: 7.7em;
   width: 12em;
-  /* background: #fff; */
-  /* border: solid red; */
   border-radius: 1em;
 }
 
