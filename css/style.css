@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "blowbrush";
-  src: url("../fonts/blowbrush.ttf") format("truetype");
+  font-family: "poppins";
+  src: url("../poppins/Poppins-Regular.ttf") format("truetype");
 }
 
 @font-face {
@@ -9,8 +9,8 @@
 }
 
 @font-face {
-  font-family: "lato";
-  src: url("../fonts/Lato-Light.ttf") format("truetype");
+  font-family: "avenir-next";
+  src: url("../fonts/avenir-next.otf") format("opentype");
 }
 
 a {
@@ -22,7 +22,8 @@ body {
   width: 100%;
   padding: 0;
   overflow-x: hidden;
-  font-family: "lato";
+  font-family: "avenir-next";
+  position: relative;
 }
 
 #navbar {
@@ -36,11 +37,19 @@ body {
   justify-content: space-between;
   align-items: center;
   z-index: 1;
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.5) 40%,
+    rgba(0, 0, 0, 0.6) 80%,
+    rgba(0, 0, 0, 0.8)
+  );
+  box-shadow: 0 0.01em 0.5em #000;
 }
 
 #logoimg {
   width: auto;
-  height: 5em;
+  height: 2.4em;
+  margin: 0.1em 0.3em;
 }
 
 #logoimg img {
@@ -62,10 +71,10 @@ body {
 #hamburger {
   background-color: #fff;
   color: #f00;
-  font-size: 1.7em;
+  font-size: 1.3em;
   font-weight: 400;
-  width: 1.4em;
-  height: 1.4em;
+  width: 1.3em;
+  height: 1.3em;
   border-radius: 50%;
   cursor: pointer;
   display: flex;
@@ -79,13 +88,13 @@ body {
 
 #register {
   color: #fff;
-  font-size: 0.9em;
+  font-size: 0.8em;
   background: transparent;
   outline: 0;
   border: 0.1em solid #fff;
-  height: 2.2em;
-  width: 5.2em;
-  font-weight: 500;
+  height: 2em;
+  width: 4.2em;
+  font-weight: 600;
   border-radius: 0.4em;
   cursor: pointer;
 }
@@ -93,10 +102,10 @@ body {
 #side-nav {
   position: fixed;
   height: 100%;
-  width: 10em;
+  width: 12em;
   z-index: 1;
   top: 0;
-  right: -10em;
+  right: -12em;
   background-color: #444;
   overflow-x: hidden;
   transition: 0.5s;
@@ -109,12 +118,12 @@ body {
 
 .hoverid a {
   color: #fff;
-  font-size: 1.5em;
+  font-size: 1.3em;
   display: block;
   width: 100%;
   text-align: center;
   height: 1em;
-  margin: 0.8em 0;
+  margin: 0.6em 0;
   font-weight: 700;
 }
 
@@ -122,7 +131,7 @@ body {
   font-family: "reality-check";
   font-weight: 500;
   height: 0.7em;
-  font-size: 2em;
+  font-size: 1.4em;
   text-shadow: -0.1em 0 red;
 }
 
@@ -148,6 +157,7 @@ body {
   position: relative;
   height: 1.5em;
   background-color: red;
+  z-index: 2;
 }
 
 #main #text img {
@@ -443,7 +453,7 @@ body {
   font-size: 2vw;
   background-color: #111;
   box-sizing: border-box;
-  padding: 5em 0;
+  padding: 1em 0;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
@@ -465,7 +475,7 @@ body {
 #abthead {
   font-size: 2em;
   font-weight: bold;
-  font-family: "blowbrush";
+  font-family: "poppins";
   padding: 0;
   margin: 0;
   padding-bottom: 0.3em;
@@ -487,7 +497,7 @@ body {
   width: 100vw;
   min-height: 100vh;
   box-sizing: border-box;
-  padding-top: 5em;
+  padding-top: 0.5em;
   background: url("../images/bg.svg");
 }
 
@@ -496,7 +506,7 @@ body {
   text-align: center;
   font-size: 1.8em;
   font-weight: bold;
-  font-family: "blowbrush";
+  font-family: "poppins";
   padding: 0.2em 0;
   margin-left: 2em;
 }
@@ -514,22 +524,43 @@ body {
 #test #columns .column {
   font-size: 0.8em;
   float: left;
-  padding: 1em;
-  padding-bottom: 0;
+  padding: 2em;
   width: 20vmax;
 }
 
-#test #columns p {
+#test #columns .column p {
   font-weight: 500;
   margin: 0;
   padding: 0.2em;
 }
 
-#test #columns .contact-name {
-  font-weight: 900;
+#test #columns .column p strong {
+  display: inline-block;
+  position: relative;
+  font-family: "avenir-next";
+  margin-bottom: 0.8em;
+  padding-bottom: 0.2em;
+}
+
+#test #columns .column p strong::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 0.1em;
+  background: #fff;
+}
+
+#footer-base {
+  font-size: 2vw;
+  width: 100%;
+  height: 3.8em;
 }
 
 #footer {
+  position: absolute;
+  bottom: 0;
   font-size: 2vw;
   background: #172130;
   display: flex;
@@ -571,14 +602,14 @@ body {
   #about {
     font-size: 2.3vw;
   }
+  #test {
+    font-size: 2.3vw;
+  }
   #footer {
     font-size: 2.3vw;
   }
-  #test h1 {
-    font-size: 2em;
-  }
-  #test #columns {
-    font-size: 1em;
+  #footer-base {
+    font-size: 2.3vw;
   }
 }
 
@@ -592,20 +623,14 @@ body {
   #about {
     font-size: 3vw;
   }
+  #test {
+    font-size: 3vw;
+  }
   #footer {
     font-size: 3vw;
   }
-  #test h1 {
-    font-size: 2em;
-  }
-  #test #columns {
-    font-size: 1.2em;
-  }
-  #test h1 {
-    font-size: 2.4em;
-  }
-  #test #columns {
-    font-size: 1.2em;
+  #footer-base {
+    font-size: 3vw;
   }
 }
 
@@ -619,14 +644,14 @@ body {
   #about {
     font-size: 3.6vw;
   }
+  #test {
+    font-size: 3.6vw;
+  }
   #footer {
     font-size: 3.6vw;
   }
-  #test h1 {
-    font-size: 2.4em;
-  }
-  #test #columns {
-    font-size: 1.4em;
+  #footer-base {
+    font-size: 3.6vw;
   }
 }
 
@@ -640,17 +665,18 @@ body {
   #about {
     font-size: 4.3vw;
   }
+  #test {
+    font-size: 4.3vw;
+  }
   #footer {
     font-size: 4.3vw;
   }
   #footer #address {
     text-align: center;
   }
-  #test h1 {
-    font-size: 3em;
-  }
-  #test #columns {
-    font-size: 2em;
+  #footer-base {
+    height: 5.8em;
+    font-size: 4.3vw;
   }
 }
 
@@ -664,16 +690,17 @@ body {
   #about {
     font-size: 4.8vw;
   }
+  #test {
+    font-size: 4.8vw;
+  }
   #footer {
     font-size: 4.8vw;
   }
   #footer #address {
     text-align: center;
   }
-  #test h1 {
-    font-size: 4em;
-  }
-  #test #columns {
-    font-size: 2.4em;
+  #footer-base {
+    height: 5.8em;
+    font-size: 4.8vw;
   }
 }
