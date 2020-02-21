@@ -168,7 +168,7 @@ main-form > center {
   }
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 321px) and (max-width: 480px) {
   #form-container {
     font-size: 4.6vw;
     width: 15em;

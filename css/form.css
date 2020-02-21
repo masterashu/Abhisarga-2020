@@ -6,7 +6,7 @@ body {
 
 #form-container {
   font-size: 2vw;
-  margin: 2.6em auto 1.5em;
+  margin: 3.2em auto 2em;
   width: 17em;
   padding-top: 5em;
   font-family: "poppins";
@@ -150,7 +150,7 @@ main-form > center {
   }
 }
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 321px) and (max-width: 480px) {
   #form-container {
     font-size: 4.6vw;
   }
