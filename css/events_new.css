@@ -99,6 +99,7 @@ body {
   font-weight: bold;
   text-shadow: 0.05em 0.01em 0 yellow, 0.1em 0.01em 0 red;
   color: #008376;
+  letter-spacing: 0.05em;
 }
 
 .ev-event-card:nth-of-type(8n + 1) {
