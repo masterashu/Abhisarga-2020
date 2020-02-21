@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "reality-check";
-  src: url("../fonts/Reality_Check.otf") format("opentype");
+  font-family: "marker-felt";
+  src: url("../fonts/Marker_Felt_Wide.ttf") format("opentype");
 }
 
 @font-face {
@@ -128,7 +128,7 @@ body {
 }
 
 .hoverid a:hover {
-  font-family: "reality-check";
+  font-family: "marker-felt";
   font-weight: 500;
   height: 0.7em;
   font-size: 1.4em;
