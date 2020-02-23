@@ -9,7 +9,7 @@ body {
   box-sizing: border-box;
   font-size: 2vw;
   width: 30em;
-  margin: 3em auto 1.5em;
+  margin: 3.2em auto 0.15em;
   font-family: "poppins";
   background: url("../images/form_back.png");
   background-size: 50% 100%;

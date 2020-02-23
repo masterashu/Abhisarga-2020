@@ -6,15 +6,15 @@ body {
 
 #form-container {
   font-size: 2vw;
-  margin: 3.2em auto 2em;
+  margin: 3em auto 0.15em;
   width: 17em;
-  padding-top: 6em;
+  padding-top: 4.5em;
   font-family: "poppins";
 }
 
 #form-container > img {
   position: absolute;
-  height: 6em;
+  height: 4.5em;
   width: auto;
   left: 50%;
   top: 0;
@@ -23,25 +23,25 @@ body {
 
 #main-form {
   width: 15em;
-  margin: 0 auto 1em;
+  margin: 0 auto 0.8em;
   background: url("../images/form_back.png");
   background-size: 15em 100%;
-  padding: 0;
+  padding: 0.5em 0;
 }
 
 #main-form > form {
   position: relative;
-  padding: 0.5em 0 0;
+  padding: 0;
   margin: 0;
   width: 100%;
 }
 
-#main-form > form > input {
+#main-form input {
   display: block;
   font-size: 0.7em;
   height: 2.7em;
   box-sizing: border-box;
-  margin: 1.3em auto 0;
+  margin: 0.7em auto;
   width: 80%;
   border-radius: 0.2em;
   outline: 0;
@@ -49,11 +49,11 @@ body {
   box-shadow: 0.1em 0.05em 0 #444;
 }
 
-#main-form > form > input[data-box="text"] {
+#main-form input[data-box="text"] {
   padding-left: 2.4em;
 }
 
-#main-form > form > input[data-box="button"] {
+#main-form input[data-box="button"] {
   background-color: #44a5c0;
   font-size: 0.75em;
   font-weight: 200;
@@ -65,15 +65,15 @@ body {
 #main-form > form > i {
   font-size: 0.7em;
   position: absolute;
-  width: 2em;
-  height: 2em;
+  width: 1.3em;
+  height: 1.3em;
 }
 
 #main-form > form > i::after {
   position: absolute;
   width: 1.3em;
   height: 1.3em;
-  top: 2em;
+  top: -2.7em;
   left: 2.6em;
   content: "";
 }
@@ -88,20 +88,54 @@ body {
   background-size: 100% 100%;
 }
 
-main-form > center {
+#main-form > .center {
+  text-align: center;
   padding: 0;
   margin: 0;
+  height: 0.8em;
 }
 
-#main-form > center > a {
+#main-form > .center > a {
   padding: 0;
-  line-height: 1.1em;
   color: #fff;
   font-size: 0.65em;
+  line-height: 0.8em;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-shadow: 0.15em 0.05em 0 #000;
   font-family: "avenir-next";
+  vertical-align: top;
+}
+
+#main-form > .divider {
+  display: table;
+  font-size: 0.6em;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto;
+}
+.divider span {
+  display: table-cell;
+  position: relative;
+}
+.divider span:first-child,
+.divider span:last-child {
+  width: 50%;
+  background-size: 100% 0.1em;
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+}
+.divider span:first-child {
+  background-image: linear-gradient(90deg, transparent, #000);
+}
+.divider span:nth-child(2) {
+  color: #000;
+  padding: 0 0.3em;
+  width: auto;
+  white-space: nowrap;
+}
+.divider span:last-child {
+  background-image: linear-gradient(90deg, #000, transparent);
 }
 
 #form-container > hr {
@@ -115,7 +149,7 @@ main-form > center {
 
 #form-redirect {
   padding: 0;
-  margin: 1.4em 0 0;
+  margin: 1em 0 0;
   line-height: 1.1em;
   width: 100%;
   text-align: center;
