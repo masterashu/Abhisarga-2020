@@ -126,16 +126,16 @@ body {
   background-repeat: no-repeat;
 }
 .divider span:first-child {
-  background-image: linear-gradient(90deg, transparent, #000);
+  background-image: linear-gradient(90deg, transparent, #111);
 }
 .divider span:nth-child(2) {
-  color: #000;
+  color: #111;
   padding: 0 0.3em;
   width: auto;
   white-space: nowrap;
 }
 .divider span:last-child {
-  background-image: linear-gradient(90deg, #000, transparent);
+  background-image: linear-gradient(90deg, #111, transparent);
 }
 
 #form-container > hr {

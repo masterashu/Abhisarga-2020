@@ -8,7 +8,7 @@ body {
   position: relative;
   box-sizing: border-box;
   font-size: 2vw;
-  width: 30em;
+  width: 24em;
   margin: 3.2em auto 0.15em;
   font-family: "poppins";
   background: url("../images/form_back.png");
@@ -17,7 +17,7 @@ body {
   border-radius: 0.8em;
   overflow: hidden;
   padding: 0;
-  padding-left: 15em;
+  padding-left: 12em;
 }
 
 #form-image {
@@ -33,112 +33,119 @@ body {
   box-sizing: border-box;
   width: 100%;
   background: #32425a;
-  padding: 0.3em;
-  height: 18em;
+  padding: 0.3em 0.2em 1em;
+  font-family: "poppins";
 }
 
-/* #main-form > form {
-  position: relative;
-  padding: 0.5em 0 0;
+#main-form > form {
+  padding: 0;
   margin: 0;
   width: 100%;
 }
 
-#main-form > form > input {
+#main-form > h1 {
+  color: #fff;
+  font-size: 0.75em;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
+}
+
+#main-form input,
+#main-form select {
+  background-color: #fff;
+  box-sizing: content-box;
+  color: #444;
   display: block;
-  font-size: 0.7em;
-  height: 2.7em;
-  box-sizing: border-box;
-  margin: 1.3em auto 0;
-  width: 80%;
-  border-radius: 0.2em;
+  font-size: 0.5em;
+  padding: 0.45em 0.8em;
+  margin: 1.5em auto 0;
+  width: 87%;
   outline: 0;
   border: 0;
-  box-shadow: 0.1em 0.05em 0 #444;
 }
 
-#main-form > form > input[data-box="text"] {
-  padding-left: 2.4em;
+#main-form input::placeholder {
+  color: #aaa;
 }
 
-#main-form > form > input[data-box="button"] {
-  background-color: #44a5c0;
-  font-size: 0.75em;
-  font-weight: 200;
-  letter-spacing: 0.06em;
+#main-form label {
+  display: block;
+  font-size: 0.4em;
+  height: 1em;
+  color: #fff;
+  font-weight: 500;
+  width: 87%;
+  margin: 0 auto;
+  padding: 0 0.8em;
+  position: relative;
+  top: 1.3em;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+#main-form input[data-box="button"] {
+  background-color: #47c0af;
+  font-size: 0.5em;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 0.01em;
   color: #fff;
   cursor: pointer;
+  margin: 2em auto 0;
 }
 
-#main-form > form > i {
-  font-size: 0.7em;
-  position: absolute;
-  width: 2em;
-  height: 2em;
-}
-
-#main-form > form > i::after {
-  position: absolute;
-  width: 1.3em;
-  height: 1.3em;
-  top: 2em;
-  left: 2.6em;
-  content: "";
-}
-
-#main-form > form > i.email::after {
-  background-image: url("../images/svg/mail.svg");
-  background-size: 100% 100%;
-}
-
-#main-form > form > i.password::after {
-  background-image: url("../images/svg/password.svg");
-  background-size: 100% 100%;
-}
-
-main-form > center {
+#main-form > .center {
   padding: 0;
-  margin: 0;
+  margin: 0.4em 0 0;
+  justify-content: center;
+  display: flex;
 }
 
-#main-form > center > a {
-  padding: 0;
-  line-height: 1.1em;
-  color: #fff;
-  font-size: 0.65em;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-shadow: 0.15em 0.05em 0 #000;
-  font-family: "avenir-next";
+#main-form > .center > a {
+  margin: 0.5em 0;
+  padding-bottom: 0.04em;
+  border-bottom: 0.12em solid #49586d;
+  vertical-align: top;
+  color: #99b1bd;
+  font-size: 0.45em;
+  letter-spacing: 0.02em;
 }
 
-#form-container > hr {
-  padding: 0;
-  margin: 0 auto;
-  height: 0.1em;
-  width: 75%;
-  background: #fff;
-  box-shadow: 0.02em 0.05em #000;
-}
-
-#form-redirect {
-  padding: 0;
-  margin: 1.4em 0 0;
-  line-height: 1.1em;
-  width: 100%;
+#main-form > .divider {
+  position: relative;
+  top: 0.65em;
+  display: table;
+  font-size: 0.45em;
   text-align: center;
-  color: #fff;
-  font-size: 0.6em;
-  letter-spacing: 0.1em;
-  font-weight: 800;
-  text-shadow: 0.05em 0.15em 0em #000;
-  font-family: "avenir-next";
+  width: 95%;
+  margin: 0 auto;
 }
-
-#form-redirect > a {
-  color: unset;
-  text-decoration: unset;
-} */
+.divider span {
+  display: table-cell;
+  position: relative;
+}
+.divider span:first-child,
+.divider span:last-child {
+  width: 50%;
+  background-size: 100% 0.1em;
+  background-position: 0 50%;
+  background-repeat: no-repeat;
+}
+.divider span:first-child {
+  background-image: linear-gradient(90deg, #99b1bd, #868686);
+}
+.divider span:nth-child(2) {
+  color: #868686;
+  padding: 0 0.3em;
+  width: auto;
+  white-space: nowrap;
+}
+.divider span:last-child {
+  background-image: linear-gradient(90deg, #868686, #99b1bd);
+}
 
 @media (min-width: 1025px) and (max-width: 1280px) {
   #form-conatiner {
@@ -171,7 +178,7 @@ main-form > center {
 @media (min-width: 321px) and (max-width: 480px) {
   #form-container {
     font-size: 4.6vw;
-    width: 15em;
+    width: 12em;
     padding-top: 6em;
     padding-left: 0;
     background-size: 100% 25%;
@@ -187,7 +194,7 @@ main-form > center {
 @media (max-width: 320px) {
   #form-container {
     font-size: 5.3vw;
-    width: 15em;
+    width: 12em;
     padding-top: 6em;
     padding-left: 0;
     background-size: 100% 25%;
