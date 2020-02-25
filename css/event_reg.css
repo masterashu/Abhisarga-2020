@@ -138,6 +138,16 @@ form a {
   background-repeat: no-repeat;
 }
 
+#reg-form-link {
+  font-size: 0.5em;
+  color: rgb(66, 139, 202);
+  text-decoration: none;
+  border-bottom: 0.05em solid rgb(66, 139, 202);
+  letter-spacing: 0.03em;
+  font-weight: 600;
+  padding-bottom: 0.1em;
+}
+
 @media (min-width: 1025px) and (max-width: 1280px) {
   #event-reg-form-container {
     font-size: 2.4vw;
